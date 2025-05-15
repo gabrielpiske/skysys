@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skysys - Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-text">
+                    <h1>SKY<span>SYS</span></h1>
+                    <p>Sistema de Gestão Empresarial</p>
+                </div>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="#" data-page="home"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#" data-page="reports"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    <li><a href="#" data-page="training"><i class="fas fa-graduation-cap"></i> Treinamento</a></li>
+                    <li><a href="#" data-page="maintenance"><i class="fas fa-tools"></i> Manutenção</a></li>
+                    <li><a href="#" data-page="profits"><i class="fas fa-money-bill-wave"></i> Lucros</a></li>
+                </ul>
+            </nav>
+            <!--<div class="user-menu">
+                <span>Usuário: Admin</span>
+                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</button>
+            </div>-->
+        </header>
+
+        <main>
+            <!-- Página Inicial -->
+            <section id="home-page" class="page active">
+                <div class="welcome-section">
+                    <h2>Bem-vindo ao SkySys</h2>
+                    <p>Seu sistema completo de gestão empresarial</p>
+                    <div class="dashboard-cards">
+                        <div class="card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Desempenho</h3>
+                            <p>85% positivo</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-users"></i>
+                            <h3>Funcionários</h3>
+                            <p>42 ativos</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Máquinas</h3>
+                            <p>18 operantes</p>
+                        </div>
+                        <div class="card">
+                            <i class="fas fa-dollar-sign"></i>
+                            <h3>Lucro Mensal</h3>
+                            <p>R$ 245.678,90</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Relatórios -->
+            <section id="reports-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-chart-bar"></i> Relatórios</h2>
+                    <button class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+                </div>
+                <div class="content">
+                    <div class="month-selector">
+                        <h3>Selecione o mês para visualizar o relatório:</h3>
+                        <div class="months-grid">
+                            <button class="month-btn" data-month="1">Janeiro</button>
+                            <button class="month-btn" data-month="2">Fevereiro</button>
+                            <button class="month-btn" data-month="3">Março</button>
+                            <button class="month-btn" data-month="4">Abril</button>
+                            <button class="month-btn" data-month="5">Maio</button>
+                            <button class="month-btn" data-month="6">Junho</button>
+                            <button class="month-btn" data-month="7">Julho</button>
+                            <button class="month-btn" data-month="8">Agosto</button>
+                            <button class="month-btn" data-month="9">Setembro</button>
+                            <button class="month-btn" data-month="10">Outubro</button>
+                            <button class="month-btn" data-month="11">Novembro</button>
+                            <button class="month-btn" data-month="12">Dezembro</button>
+                        </div>
+                    </div>
+                    <div class="report-display">
+                        <h3>Relatório do Mês Selecionado</h3>
+                        <div class="report-content">
+                            <p>Selecione um mês para visualizar o relatório correspondente.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Treinamento -->
+            <section id="training-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-graduation-cap"></i> Treinamentos</h2>
+                    <button class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+                </div>
+                <div class="content">
+                    <div class="month-selector">
+                        <h3>Selecione o mês para visualizar os treinamentos:</h3>
+                        <div class="months-grid">
+                            <button class="month-btn" data-month="1">Janeiro</button>
+                            <button class="month-btn" data-month="2">Fevereiro</button>
+                            <button class="month-btn" data-month="3">Março</button>
+                            <button class="month-btn" data-month="4">Abril</button>
+                            <button class="month-btn" data-month="5">Maio</button>
+                            <button class="month-btn" data-month="6">Junho</button>
+                            <button class="month-btn" data-month="7">Julho</button>
+                            <button class="month-btn" data-month="8">Agosto</button>
+                            <button class="month-btn" data-month="9">Setembro</button>
+                            <button class="month-btn" data-month="10">Outubro</button>
+                            <button class="month-btn" data-month="11">Novembro</button>
+                            <button class="month-btn" data-month="12">Dezembro</button>
+                        </div>
+                    </div>
+                    <div class="training-display">
+                        <h3>Treinamentos do Mês Selecionado</h3>
+                        <div class="training-content">
+                            <p>Selecione um mês para visualizar os treinamentos programados.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Manutenção -->
+            <section id="maintenance-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-tools"></i> Manutenção</h2>
+                    <button class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+                </div>
+                <div class="content">
+                    <div class="machine-categories">
+                        <h3>Selecione a categoria de máquina:</h3>
+                        <div class="categories-grid">
+                            <button class="category-btn" data-category="producao">Produção</button>
+                            <button class="category-btn" data-category="embalagem">Embalagem</button>
+                            <button class="category-btn" data-category="transporte">Transporte</button>
+                            <button class="category-btn" data-category="informatica">Informática</button>
+                        </div>
+                    </div>
+                    <div class="maintenance-display">
+                        <h3>Relatórios de Manutenção</h3>
+                        <div class="maintenance-content">
+                            <p>Selecione uma categoria para visualizar os relatórios de manutenção.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Lucros -->
+            <section id="profits-page" class="page">
+                <div class="page-header">
+                    <h2><i class="fas fa-money-bill-wave"></i> Lucros</h2>
+                    <button class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
+                </div>
+                <div class="content">
+                    <div class="profit-options">
+                        <h3>Selecione o tipo de visualização:</h3>
+                        <div class="options-grid">
+                            <button class="profit-view-btn active" data-view="monthly">Mensal</button>
+                            <button class="profit-view-btn" data-view="quarterly">Trimestral</button>
+                            <button class="profit-view-btn" data-view="annual">Anual</button>
+                        </div>
+                    </div>
+                    <div class="profit-display">
+                        <h3>Gráfico de Lucros</h3>
+                        <div class="chart-container">
+                            <canvas id="profitChart"></canvas>
+                        </div>
+                        <div class="profit-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Período</th>
+                                        <th>Lucro Bruto</th>
+                                        <th>Despesas</th>
+                                        <th>Lucro Líquido</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="profit-table-body">
+                                    <!-- Dados serão preenchidos via JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SkySys &copy; 2024 - Sistema de Gestão Empresarial</p>
+            <p>Desenvolvedor - <a href="https://portfolio-piske.vercel.app/" target="_blank">Gabriel S Piske</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
